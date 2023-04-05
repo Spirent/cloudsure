@@ -3,5 +3,5 @@
 - Yet anotehr change
 # this is super cool.
 
-<img src="images/marchhare.png">
+<img src="images/marchhare.png" style="height: 100px; width:100px;"/>
 
