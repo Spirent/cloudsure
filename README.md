@@ -1,2 +1,2 @@
 # cloudsure-nimbus
-A luminous vapor, cloud, or atmosphere about a god or goddess.
+A splendid atmosphere or aura, as of glamour, that surrounds a person or thing.
