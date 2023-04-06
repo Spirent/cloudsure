@@ -40,11 +40,12 @@ Each scenario has the following attributes:
 #### Actions
 Each scenario action has the following attributes:
 - Action Name
+- Action Type
 - Action Target(s):
 - Action Settings
 - Action Timing (all except first scenario)
 
-### Monitoring
+### Observability
 
 ### Analytics
   
