@@ -7,9 +7,9 @@ A testcase a is set of actions performed on a target enviroment while measuring 
 2. Environment
 3. Scenarios
 4. Monitoring
-5. Analytics
+5. Analytics (Optional)
 
-> Note: All sections are required, except analytics which is optionally.  If not used, the result of the testcase will be stored for post-analytics outside the testcase.
+> Note: All sections are required, except analytics.  If an analytics section is not included, the result of the testcase will be stored for post-analytics outside the testcase.
 
 ### Basic Information
 Each testcase includes the following information elements:
@@ -37,6 +37,7 @@ Each scenario has the following attributes:
 - Scenario Timing (all except first)
 - Action(s)
 
+#### Actions
 Each scenario action has the following attributes:
 - Action Name
 - Action Target(s):
