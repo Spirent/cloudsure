@@ -1,11 +1,10 @@
 # Testcase Overview
-This document describes the elements and their relationships that make up a testcase.
+This document describes the elements and their relationships that make up a testcase. Here are the main element:
 
-Here are the main element
-- General Info
-- Environment
-- Scenarios (and Actions)
-- Analytics 
+1. General Info
+2. Environment (including metrics collection)
+3. Scenarios (and Actions)
+4. Analytics 
 
 ## Basic Information
 - Name
