@@ -1,5 +1,5 @@
 # Testcase Overview
-This document describes the attributes and their relationships that make up a testcase.  Each testcase is made of the following main areas:
+This document describes the attributes and their relationships that make up a testcase.  Each testcase is made of the following main sections:
 
 1. Basic Information
 2. Environment
@@ -10,7 +10,7 @@ This document describes the attributes and their relationships that make up a te
 ## Basic Information
 These attributes are used to uniquely identify each testcase:
 
-- Name
+- Testcase Name
 - Description (optional)
 - ID
 - Date Created/Updated
@@ -19,11 +19,21 @@ These attributes are used to uniquely identify each testcase:
 
 ## Environment
 These attributes are used to define where the testcase will be run, and what information will be collected as part of the testcase:
-- Name
+- Environment Name
 - Auth Type
 - etc
 
 ## Scenarios/Actions
-Each testcase conists of one or more scenarios, and each scenarios contains one or more action. Scenarios (and their embeededactions)are listed sequentionally 
+Each testcase conists of one or more scenarios, and each scenarios contains one or more action. Scenarios (and their embeeded actions) are listed sequentionally. Aside from the first scenarios (and action), all the others will having timing aspects relative to the sequence.
+
+Each scenario has the following attributes:
+- Scenario Name
+- Timing (all except first scenario)
+- List of actions
+
+Each action has the following attributes:
+- Action Name
+- Timing (all except first scenario)
+- Settings
 
 ## Analytics
