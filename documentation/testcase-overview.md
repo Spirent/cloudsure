@@ -22,18 +22,22 @@ These attributes are used to define where the testcase will be run, and what inf
 - Environment Name
 - Auth Type
 - etc
+- etc
+- etc
 
 ## Scenarios/Actions
 Each testcase conists of one or more scenarios, and each scenarios contains one or more action. Scenarios (and their embeeded actions) are listed sequentionally. Aside from the first scenarios (and action), all the others will having timing aspects relative to the sequence.
 
 Each scenario has the following attributes:
 - Scenario Name
-- Timing (all except first scenario)
+- Scenario Timing (all except first scenario)
 - List of actions
 
 Each action has the following attributes:
 - Action Name
-- Timing (all except first scenario)
-- Settings
+- **Action Target(s):**  this the Kubernetes object that the action will affect.
+- Action Settings
+- Action Timing (all except first scenario)
 
 ## Analytics
+  
