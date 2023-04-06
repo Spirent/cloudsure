@@ -1,5 +1,7 @@
 # Testcase Overview
-This document describes the attributes and their relationships that make up a testcase.  Each testcase is made of the following main sections:
+A testcase is set of actions performed on a target enviroment while the resulting impact is being measured. Optionally a testcase can also post-processing of the results to determine an outcome.
+
+ Each testcase consists of following sections. Each section will have a set of attributes. 
 
 1. Basic Information
 2. Environment
@@ -18,7 +20,7 @@ These attributes are used to uniquely identify each testcase:
 - Tags (optional)
 
 ## Environment
-These attributes are used to define where the testcase will be run, and what information will be collected as part of the testcase:
+These attributes are used to define where the testcase will be run:
 - Environment Name
 - Auth Type
 - etc
@@ -31,11 +33,11 @@ Each testcase conists of one or more scenarios, and each scenarios contains one 
 Each scenario has the following attributes:
 - Scenario Name
 - Scenario Timing (all except first scenario)
-- List of actions
+- List of actionst
 
 Each action has the following attributes:
 - Action Name
-- **Action Target(s):**  this the Kubernetes object that the action will affect.
+- Action Target(s): this the Kubernetes object that the action will affect.
 - Action Settings
 - Action Timing (all except first scenario)
 
