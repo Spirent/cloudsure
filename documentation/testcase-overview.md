@@ -8,7 +8,7 @@ This document describes the attributes and their relationships that make up a te
 5. Analytics (optional)
 
 ## Basic Information
-These attributes are used to uniquely identify each testcase:
+> These attributes are used to uniquely identify each testcase:
 
 - Testcase Name
 - Description (optional)
@@ -18,7 +18,7 @@ These attributes are used to uniquely identify each testcase:
 - Tags (optional)
 
 ## Environment
-These attributes are used to define where the testcase will be run, and what information will be collected as part of the testcase:
+> These attributes are used to define where the testcase will be run, and what information will be collected as part of the testcase:
 - Environment Name
 - Auth Type
 - etc
@@ -26,7 +26,7 @@ These attributes are used to define where the testcase will be run, and what inf
 - etc
 
 ## Scenarios/Actions
-Each testcase conists of one or more scenarios, and each scenarios contains one or more action. Scenarios (and their embeeded actions) are listed sequentionally. Aside from the first scenarios (and action), all the others will having timing aspects relative to the sequence.
+> Each testcase conists of one or more scenarios, and each scenarios contains one or more action. Scenarios (and their embeeded actions) are listed sequentionally. Aside from the first scenarios (and action), all the others will having timing aspects relative to the sequence.
 
 Each scenario has the following attributes:
 - Scenario Name
