@@ -7,7 +7,7 @@ This document describes the attributes and their relationships that make up a te
 4. Monitoring/Metrics
 5. Analytics (optional)
 
-## Basic Information
+### Basic Information
 These attributes are used to uniquely identify each testcase:
 
 - Testcase Name
