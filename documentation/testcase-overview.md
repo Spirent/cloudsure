@@ -1,5 +1,5 @@
 # Testcase Overview
-A testcase is set of actions performed on a target enviroment while the resulting impact is being measured. A testcase can also post-processing of the results to determine an outcome.
+A testcase is set of actions performed on a target enviroment while measuring the resulting impact. A testcase can also post-processing of the results to determine an outcome.
 
  Each testcase consists of following sections. Each section will have a set of attributes. 
 
