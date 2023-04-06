@@ -6,7 +6,7 @@ A testcase a is set of actions performed on a target enviroment while measuring 
 1. Basic Information
 2. Environment
 3. Scenarios
-4. Monitoring
+4. Observability
 5. Analytics (Optional)
 
 > Note: All sections are required, except analytics.  If an analytics section is not included, the result of the testcase will be stored for post-analytics outside the testcase.
