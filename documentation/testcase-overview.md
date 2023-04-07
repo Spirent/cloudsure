@@ -1,4 +1,4 @@
-# Testcase Overview
+# nCloudSure Testcase Overview
 A testcase is set of actions that a user wants to perform on one or more targets while measuring the resulting impact. 
 
  Each testcase consists of following sections, and each section contains one or more mandatory attributes (and possibly some optional attributes). 
@@ -11,18 +11,23 @@ A testcase is set of actions that a user wants to perform on one or more targets
 
 > Note: Every testcase requires all of the these sections, except analytics which is optional. 
 
-### Information
+## Information
 This section provides basic information about each testcase, and includes the following attributes:
 
 - **Name:** A short meaningful name to make a test case easy to find.
-- **Description (optional):** A more verbose statement about the testcase.
-- Unique ID
-- Date Created/Updated
-- Creator/Updator
-- Tags (optional)
+- **Description (optional):** This is a more verbose statement about the testcase that makes it clearer what it does
+- **Unique ID:** This is to simplify to the identification of a testcase using the common format of "XXX-123". Not two testcases can have the same number.
+- **Date Created/Updated** This is the date when the testcase created or updated a testcase.
+- **Creator/Updator:** This is the name of the person who created or updated a testcase.
+- **Tags (optional):** These are single word descriptors, or keywords that allow a user to more easily search.
 
-### Environment
-These attributes are used to define where the testcase will be run:
+## Environment
+This section defines where a testcase will be executed.  This is typically a Kubernetes namespace or cluster, and defined a user's account and access rights.
+
+A testcase can include all the attributes within the testcase itself, or a testcase reference ("point to") to a seperate Enviroment spec by name.
+
+Here are the Environment attributes:
+
 - Environment Name
 - Auth Type
 - API Endpoint
@@ -37,7 +42,7 @@ Each scenario has the following attributes:
 - Scenario Timing (all except first)
 - Action(s)
 
-#### Actions
+### Actions
 Each scenario action has the following attributes:
 - Action Name
 - Action Type: here are 
@@ -45,9 +50,9 @@ Each scenario action has the following attributes:
 - Action Settings
 - Action Timing (all except first scenario)
 
-### Observability
+## Observability
 
 - 
 
-### Analytics
+## Analytics
   
