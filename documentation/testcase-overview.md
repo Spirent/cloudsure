@@ -3,6 +3,8 @@ A testcase is set of actions performed on a target enviroment while measuring th
 
 Isnt this cool?
 
+Yes it is!
+
  Each testcase consists of following sections, each containing a set of attributes. 
 
 1. [Information](#information)
