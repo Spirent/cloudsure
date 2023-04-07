@@ -1,11 +1,7 @@
 # Testcase Overview
-A testcase is set of actions performed on a target enviroment while measuring the resulting impact. A testcase can also include post-processing of the results to determine an outcome (e.g. pass/fail, score, etc.).
+A testcase is set of actions that a user wants to perform on one or more targets while measuring the resulting impact. 
 
-Isnt this cool?
-
-Yes it is!
-
- Each testcase consists of following sections, each containing a set of attributes. 
+ Each testcase consists of following sections, and each section contains one or more mandatory attributes (and possibly some optional attributes). 
 
 1. [Information](#information)
 2. [Environment](#environment)
@@ -13,13 +9,13 @@ Yes it is!
 4. [Observability](#observability)
 5. [Analytics](#analytics)
 
-> Note: All sections are required, except analytics.  If an analytics section is not included, the result of the testcase will be stored for post-analytics outside the testcase.
+> Note: Every testcase requires all of the these sections, except analytics which is optional. 
 
 ### Information
-Each testcase includes the following information elements:
+This section provides basic information about each testcase, and includes the following attributes:
 
-- Testcase Name
-- Description (optional)
+- **Name:** A short meaningful name to make a test case easy to find.
+- **Description (optional):** A more verbose statement about the testcase.
 - Unique ID
 - Date Created/Updated
 - Creator/Updator
