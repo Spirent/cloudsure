@@ -3,11 +3,11 @@ A testcase a is set of actions performed on a target enviroment while measuring 
 
  Each testcase consists of following sections, each containing a set of attributes. 
 
-1. Information
-2. Environment
-3. Scenarios
-4. Observability
-5. Analytics (Optional)
+1. [Information](#information)
+2. [Environment](#environment)
+3. [Scenarios](#scenarios)
+4. [Observability](#observability)
+5. [Analytics](#analytics)
 
 > Note: All sections are required, except analytics.  If an analytics section is not included, the result of the testcase will be stored for post-analytics outside the testcase.
 
