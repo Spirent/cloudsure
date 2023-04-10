@@ -69,129 +69,126 @@ Each scenario has the following attributes:
 
   - **Action Controls:** Some actions will have one or more controls, and they will vary depending on the specific action.
 
-    See [Using Actions](#using-actions) for relevant details about how to select targets, the use settings or controls for each type of action.
+    See [Impairment Actions](#impairment-actions) or [Load (5G) Actions](#load-5G-actions) for relevant details about how to select targets, the use settings or controls for each type of action.
   
   - **Action Timing:**
     - **Action Start:** This defines if this Action will start "After Previous Action" or "With Previous Action"
     - **Action Delay:** This defines the amount of time in seconds  this Action will wait before starting.  
 
+   ### Impairment Action
 
-    ## Using Actions
-    The following describes how each impairment action determines their targets, as well as their setting.
+   Here are the currently supported impairment actions in three groups:
 
-    ### Impairment Action
+   Network Contention
+    - [Network Latency](#network-latency)  
+    - [Packet Loss](#packet-loss)
+    - [DNS Disruption](#dns-disruption)
+   
+   Object Failure
+    - [Container Failure](#container-failure)
+    - [Pod Failure](#pod-failure)
+    - [Node Failure](#node-failure)
+   
+   Resource Constraint 
+    - [Node Drain](#node-drain)
+    - [Node Taint](#node-taint)
+    - [Pod CPU Hog](#pod-cpu-hog)
+    - [Pod Disk Full](#pod-disk-full)
+    - [Pod Memory Hog](#pod-memory-hog)
+    - [Node Contention](#node-contention)
 
-    Here are the currently supported impairment actions in three groups:
+    #### Network Latency
 
-    - Network Contention
-        - [Network Latency](#network-latency)  
-        - [Packet Loss](#packet-loss)
-        - [DNS Disruption](#dns-disruption)
-    - Object Failure
-        - [Container Failure](#container-failure)
-        - [Pod Failure](#pod-failure)
-        - [Node Failure](#node-failure)
-    - Resource Constraint 
-        - [Node Drain](#node-drain)
-        - [Node Taint](#node-taint)
-        - [Pod CPU Hog](#pod-cpu-hog)
-        - [Pod Disk Full](#pod-disk-full)
-        - [Pod Memory Hog](#pod-memory-hog)
-        - [Node Contention](#node-contention)
-
-        #### Network Latency
-
-        - **Target Selection**
+    - **Target Selection**
             
-            Network Latency can be applied to traffic destined for one or more containers or pods in a specific namespace.
+        Network Latency can be applied to traffic destined for one or more containers or pods in a specific namespace.
 
-            - **Selecting by Pod:** A pod can be selected by the namespace, name, label, DeploymentSet, StatefulSet.  The pod name and label can be selected by full name or or partial match (i.e. "Regex").
+        - **Selecting by Pod:** A pod can be selected by the namespace, name, label, DeploymentSet, StatefulSet.  The pod name and label can be selected by full name or or partial match (i.e. "Regex").
 
-            - **Selecting by Container:** A container can be selected by the name or label, and can be selected by full name or or partial match (i.e. "Regex").
+        - **Selecting by Container:** A container can be selected by the name or label, and can be selected by full name or or partial match (i.e. "Regex").
 
-        - **Settings**
-            - **SSH:**
-            - **Network Device:**
-            - **Destination Address:**
-            - **Selection Method:** Selection Count, Selection Percent
-            - **Duration:**
-            - **Delay:**
-            - **Progression:** None, List, Steps
-            - **Latency Amount:**
+    - **Settings**
+        - **SSH:**
+        - **Network Device:**
+        - **Destination Address:**
+        - **Selection Method:** Selection Count, Selection Percent
+        - **Duration:**
+        - **Delay:**
+        - **Progression:** None, List, Steps
+        - **Latency Amount:**
 
-        #### Packet Loss
-        - **Target Selection**
+    #### Packet Loss
+    - **Target Selection**
             
-            Packet Loss can be  applied to traffic destined for one or more containers or pods in a specific namespace.
+        Packet Loss can be  applied to traffic destined for one or more containers or pods in a specific namespace.
 
-            - **Selecting by Pod:** A pod can be selected by the namespace, name, label, DeploymentSet, StatefulSet, name and label can also be seleted by "Regex" or partial match.
+        - **Selecting by Pod:** A pod can be selected by the namespace, name, label, DeploymentSet, StatefulSet, name and label can also be seleted by "Regex" or partial match.
 
-            - **Selecting by Container:** A container can be selected by the name or label by "Regex" or partial match.
+        - **Selecting by Container:** A container can be selected by the name or label by "Regex" or partial match.
 
-        - **Settings**
-            - **SSH:**
-            - **Network Device:**
-            - **Destination Address:**
-            - **Selection Method:** Selection Count, Selection Percent
-            - **Duration:**
-            - **Delay:**
-            - **Progression:** None, List, Steps
-            - **Packet Loss Amount:**
+    - **Settings**
+        - **SSH:**
+        - **Network Device:**
+        - **Destination Address:**
+        - **Selection Method:** Selection Count, Selection Percent
+        - **Duration:**
+        - **Delay:**
+        - **Progression:** None, List, Steps
+        - **Packet Loss Amount:**
 
-        #### DNS Disruption
-        - **Selecting Targets**
+    #### DNS Disruption
+    - **Selecting Targets**
 
-            DNS Disurption can be  applied to traffic destined for one or more containers or pods in a specific namespace.
+        DNS Disurption can be  applied to traffic destined for one or more containers or pods in a specific namespace.
 
-            - **Selecting by Pod:** A pod can be selected by the namespace, name, label, DeploymentSet, StatefulSet, name and label can also be seleted by "Regex" or partial match.
+        - **Selecting by Pod:** A pod can be selected by the namespace, name, label, DeploymentSet, StatefulSet, name and label can also be seleted by "Regex" or partial match.
 
-            - **Selecting by Container:** A container can be selected by the name or label by "Regex" or partial match.
+        - **Selecting by Container:** A container can be selected by the name or label by "Regex" or partial match.
 
-        - **Settings**
-            - **SSH:**
-            - **Network Device:**
-            - **Destination Address:**
-            - **Selection Method:** Selection Count, Selection Percent
-            - **Duration:**
-            - **Delay:**
-            - **Progression:** None, List, Steps
-            - **DNS Disruption Amount:**
+    - **Settings**
+        - **SSH:**
+        - **Network Device:**
+        - **Destination Address:**
+        - **Selection Method:** Selection Count, Selection Percent
+        - **Duration:**
+        - **Delay:**
+        - **Progression:** None, List, Steps
+        - **DNS Disruption Amount:**
 
-        #### Container Failure
-        - **Target Selection**
-        - **Settings**
+    #### Container Failure
+    - **Target Selection**
+    - **Settings**
 
-        #### Pod Failure
-        - **Target Selection**
-        - **Settings**
+    #### Pod Failure
+    - **Target Selection**
+    - **Settings**
+    #### Node Failure
+    - **Target Selection**
+    - **Settings**
 
-        #### Node Failure
-        - **Target Selection**
-        - **Settings**
+    #### Node Drain
+    - **Target Selection**
+    - **Settings**
 
-        #### Node Drain
-        - **Target Selection**
-        - **Settings**
+    #### Node Taint
+    - **Target Selection**
+    - **Settings**
 
-        #### Node Taint
-        - **Target Selection**
-        - **Settings**
+    #### Pod CPU Hog
+    - **Target Selection**
+    - **Settings**
 
-        #### Pod CPU Hog
-        - **Target Selection**
-        - **Settings**
+    #### Pod Disk Full
+    - **Target Selection**
+    - **Settings**
 
-        #### Pod Disk Full
-        - **Target Selection**
-        - **Settings**
+    #### Pod Memory Hog
+    - **Target Selection**
+    - **Settings**
 
-        #### Pod Memory Hog
-        - **Target Selection**
-        - **Settings**
-
-        #### Node Contention
-        - **Target Selection**
-        - **Settings**
+    #### Node Contention
+    - **Target Selection**
+    - **Settings**
 
     ### Load (5G) Actions
     
