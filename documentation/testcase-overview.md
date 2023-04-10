@@ -194,7 +194,10 @@ Each scenario has the following attributes:
         - **Settings**
 
     ### Load (5G) Actions
-    Each testcase can have only Load (5G) "Session" running at a time, and the controls can be in a single scenario, or across multiple scenarios. Each Load (5G) Action can be one of the following controls:
+    
+    A testcase can have multiple Load (5G) "Session". However only one sessions can be running at a one time, and the controls for that session can be in a single scenario, or across multiple scenarios. 
+    
+    Each Load (5G) Action can be one of the following controls:
 
     - **Start:** This will start a new Load (5G) session by name within a desired library.  This control also allows the user to override key values of the given session.
     - **Stop:** This will stop a Load (5G) session by name that has already been started.
