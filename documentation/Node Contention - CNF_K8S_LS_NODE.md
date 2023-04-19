@@ -1,6 +1,6 @@
 ## Testcase Overview
 
-This Testcase can selectively deplete the CPU, Memory, and IO resources of the Kubernetes node. The Testcase  validates the resilience of applications whose replicas may be evicted due to nodes becoming unschedulable (Not Ready) because of a lack of resources.
+This Testcase can selectively deplete the CPU, Memory, and IO resources of the Kubernetes node. The Testcase validates the resilience of applications whose replicas may be evicted due to nodes becoming unschedulable (Not Ready) because of a lack of resources.
 
 This testcase can optionally be run with Landslide load generation.
 
