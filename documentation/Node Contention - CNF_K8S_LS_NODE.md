@@ -1,6 +1,6 @@
 ## Testcase Overview
 
-This experiment can selectively deplete the CPU, Memory, and IO resources of the Kubernetes node. The experiment  validates the resilience of applications whose replicas may be evicted due to nodes becoming unschedulable (Not Ready) because of a lack of resources.
+This Testcase can selectively deplete the CPU, Memory, and IO resources of the Kubernetes node. The Testcase  validates the resilience of applications whose replicas may be evicted due to nodes becoming unschedulable (Not Ready) because of a lack of resources.
 
 This testcase can optionally be run with Landslide load generation.
 
@@ -217,13 +217,13 @@ Node Contention can be applied to specific nodes through a variety of different 
     The duration in seconds that the impairment runs for.
     
 - **CPU Impairment Parameters**
-    The CPU resources on the Kubernetes node are depleted as a result of this experiment. The experiment tries to validate the robustness of applications whose replicas may be evicted due to nodes becoming unschedulable (Not Ready) due to a lack of CPU resources.
+    The CPU resources on the Kubernetes node are depleted as a result of this Test. The test tries to validate the robustness of applications whose replicas may be evicted due to nodes becoming unschedulable (Not Ready) due to a lack of CPU resources.
     
     - **Node CPU HOG Impairment**: ON/OFF
     - **Node CPU Core**: Number of CPU Cores to consume per node
     - **PU Load %**: Fixed CPU load to generate as a percent for a single core
 - **Memory Impairment Parameters**
-    The Memory resources on the Kubernetes node are depleted as a result of this experiment. The experiment tries to validate the robustness of applications whose replicas may be evicted due to nodes becoming unschedulable (Not Ready) due to a lack of Memory resources.
+    The Memory resources on the Kubernetes node are depleted as a result of this test. The test tries to validate the robustness of applications whose replicas may be evicted due to nodes becoming unschedulable (Not Ready) due to a lack of Memory resources.
     
     - **Node Memory Hog Impairment**: ON/OFF
     - **Read Threads**: Number of the read threads to perform read operations. Zero value disables read operations.
@@ -233,7 +233,7 @@ Node Contention can be applied to specific nodes through a variety of different 
     - **Access Pattern**: Access pattern that will be used during memory hog impairment. Choices are RANDOM/SEQUENTIAL/REVERSE
     - **Block Size**: Size of the block in bytes. Block is a small unit to perform one read/write operation
 - **Block IO Impairment Parameters**
-    This experiment puts the Kubernetes node under io stress. The experiment's goal is to test the resiliency of programs that share this disk resource for ephemeral or persistent storage. It evaluates application robustness in the face of replica evictions induced by IO load on available disk space.
+    This test puts the Kubernetes node under io stress. The test's goal is to test the resiliency of programs that share this disk resource for ephemeral     or persistent storage. It evaluates application robustness in the face of replica evictions induced by IO load on available disk space.
     
     - **Node Block IO Hog Impairment Enabled**: ON/OFF
         Node Block IO Hog Impairment
