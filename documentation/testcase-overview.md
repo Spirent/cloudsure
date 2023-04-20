@@ -1,4 +1,4 @@
-# CloudSure-n Testcase Overview
+# CloudSure-n Test Case Overview
 A testcase is set of actions that will be performed on one or more targets while measuring the resulting impact in a specific enviroment. 
 
  Each testcase consists of following sections, and each section contains one or more mandatory attributes as well as possibly some optional. 
@@ -44,7 +44,7 @@ Here are the Environment attributes:
 ## Scenarios
 This is the section of the testcase that defines the actions to be performed on one or more targets. Each testcase consists of at least one scenario, but also could have multiple scenarios. 
 
-If more than one scenario are required, they are in a sequentional list, and each scenario (other than the first) will include a timing aspects relative to the sequence. 
+Each scenario will include a delay option, and all but the first with have a timing aspects relative to the sequence. 
 
 Lastly, each scenario includes one or more actions.
 
@@ -52,7 +52,7 @@ Each scenario has the following attributes:
 - **Scenario Name:** A short meaningful name to make a scenario easy to find.
 - **Scenario Timing:**
     - **Scenario Start:** This defines if this Scenario will start "After Previous Scenario" or "With Previous Scenario"
-    - **Scenario Delay:** This defines the amount of time in seconds  this Scenario will wait before starting.  
+    - **Scenario Delay:** This defines the amount of time in seconds.  This Scenario will wait before starting.  
 
 - **Action(s):** 
 
@@ -67,9 +67,8 @@ Each scenario has the following attributes:
 
   - **Action Settings:** Some actions will have one or more settings, and they will vary depending on the specific action.
 
-  - **Action Controls:** Some actions will have one or more controls, and they will vary depending on the specific action.
 
-    See [Impairment Actions](#impairment-actions) or [Load (5G) Actions](#load-5G-actions) for relevant details about how to select targets, the use settings or controls for each type of action.
+    See [Impairment Actions](#impairment-actions) or [Session Actions](#session-actions) for relevant details about how to select targets, the use settings or controls for each type of action.
   
   - **Action Timing:**
     - **Action Start:** This defines if this Action will start "After Previous Action" or "With Previous Action"
@@ -103,9 +102,9 @@ Each scenario has the following attributes:
             
         Network Latency can be applied to traffic destined for one or more containers or pods in a specific namespace.
 
-        - **Selecting by Pod:** A pod can be selected by the namespace, name, label, DeploymentSet, StatefulSet.  The pod name and label can be selected by full name or or partial match (i.e. "Regex").
+        - **Selecting by Pod:** A pod can be selected by the namespace, name, label, DeploymentSet, StatefulSet.  The pod name and label can be selected by full name or partial match (i.e. "Regex").
 
-        - **Selecting by Container:** A container can be selected by the name or label, and can be selected by full name or or partial match (i.e. "Regex").
+        - **Selecting by Container:** A container can be selected by the name or label, and can be selected by full name or partial match (i.e. "Regex").
 
     - **Settings**
         - **SSH:**
@@ -190,19 +189,52 @@ Each scenario has the following attributes:
     - **Target Selection**
     - **Settings**
 
-    ### Load (5G) Actions
+    ### Session Actions
     
-    A testcase can have multiple Load (5G) "Session". However only one sessions can be running at a one time, and the controls for that session can be in a single scenario, or across multiple scenarios. 
+    A Session Action is defined by (synonymous with) a LandSlide Test Session, and a each scenario can have a single LandSlide Test Session.  A testcase can have different LandSlide Test Sessions in different scernarios.
     
     Each Load (5G) Action can be one of the following controls:
 
-    - **Start:** This will start a new Load (5G) session by name within a desired library.  This control also allows the user to override key values of the given session.
-    - **Stop:** This will stop a Load (5G) session by name that has already been started.
-    - **Pause:** This will pause a Load (5G) session by name that has already been started.
-    - **Resume:** This will resume a Load (5G) session by name that has already been paused.
+    - **Start:** This will start a new LandSlide Test Session by name within a desired library.  This control also allows the user to override key values of the given session.
+    - **Stop:** This will stop a LandSlide Test Session by name that has already been started.
+    - **Resume:** This will resume a LandSlide Test Session by name that has been put into a wait state with the test session.
 
 ## Observability
 > Still needs to be defined
+
+This will start at the beginning of the Test Case, and will provde an option to extend metrics collection beyond the end of the Test Case.
+
+The targets will be selected from: container, node or kubestate metrics. 
+
+Metrics Controller URL
+
+Select
+Metrics Controller API Key
+
+Verify Metrics Controller Certificate
+ON
+InfluxDB Configuration
+Write Metrics to TC IQ
+OFF
+Write Metrics to CSV
+OFF
+Metrics Fetch Parameters
+Error Interval (sec)
+
+
+
+Fetch Interval (sec)
+
+
+
+Maximum Window (sec)
+
+
+
+Readiness (sec)
+
+
+
 
 ## Analytics
 > Still needs to be defined
