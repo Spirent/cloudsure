@@ -94,7 +94,7 @@ Each scenario has the following attributes:
         - [Node Drain](#node-drain)
         - [Node Taint](#node-taint)
         - [Pod CPU Hog](#pod-cpu-hog)
-        - [Pod Disk Full](#pod-disk-full)
+        - [Pod Disk Hog](#pod-disk-hog)
         - [Pod Memory Hog](#pod-memory-hog)
         - [Node Contention](#node-contention)
 
@@ -161,7 +161,7 @@ Each scenario has the following attributes:
         - **Target Selection**
         - **Settings**
 
-        #### Pod Disk Full
+        #### Pod Disk Hog
         - **Target Selection**
         - **Settings**
 
