@@ -86,7 +86,6 @@ Each scenario has the following attributes:
     - Network Contention
         - [Network Latency](#network-latency)  
         - [Packet Loss](#packet-loss)
-        - [DNS Disruption](#dns-disruption)
     - Object Failure
         - [Container Failure](#container-failure)
         - [Pod Failure](#pod-failure)
@@ -137,25 +136,6 @@ Each scenario has the following attributes:
             - **Delay:**
             - **Progression:** None, List, Steps
             - **Packet Loss Amount:**
-
-        #### DNS Disruption
-        - **Selecting Targets**
-
-            DNS Disurption can be  applied to traffic destined for one or more containers or pods in a specific namespace.
-
-            - **Selecting by Pod:** A pod can be selected by the namespace, name, label, DeploymentSet, StatefulSet, name and label can also be seleted by "Regex" or partial match.
-
-            - **Selecting by Container:** A container can be selected by the name or label by "Regex" or partial match.
-
-        - **Settings**
-            - **SSH:**
-            - **Network Device:**
-            - **Destination Address:**
-            - **Selection Method:** Selection Count, Selection Percent
-            - **Duration:**
-            - **Delay:**
-            - **Progression:** None, List, Steps
-            - **DNS Disruption Amount:**
 
         #### Container Failure
         - **Target Selection**
